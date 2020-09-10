@@ -19,3 +19,4 @@ attachment: attachment file name to be sent in email (optional).
 
 
 ## How to integrate with Azure DevOps:
+![image](https://user-images.githubusercontent.com/20087806/92676189-b1849700-f33e-11ea-9ce6-2fdb6ce0a80c.png)
