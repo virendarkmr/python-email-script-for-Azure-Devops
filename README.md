@@ -6,7 +6,8 @@ command to run script:
 python send_email.py --fromid="<from_id>" --toid="<to_id>" --subject="<email subject>" --attachment="<attachment_file>" --body="<email_body>"
 
 
-Help.
+
+help:
 
 fromid*: email id from the email should be sent.
 
