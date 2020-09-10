@@ -6,7 +6,7 @@ command to run script:
 python send_email.py --fromid="<from_id>" --toid="<to_id>" --subject="<email subject>" --attachment="<attachment_file>" --body="<email_body>"
 
 
-Help
+Help:.
 fromid*: email id from the email should be sent.
 
 toid*: email ids of the recepient, multiple email id should be coma seperated. ex: "test@gmail.com,test2@gmail.com,test3@gmail.com".
