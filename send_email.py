@@ -36,23 +36,6 @@ args = parser.parse_args()
 '''
 below function is for sending email alert, to add new ids in alert use comma to seperate ids
 '''
-def email_body(body=""):
-     auto_email_body = """
-\n
-Step to Open Attachment:
- 1) Right Click on attachment and click on open.
- 2) Select 7zip or zip to open attachment.
- 3) Extract content.
- 4) Open folder and open index(html file) with chrome.
-\n
-Note: This is an Auto Generated Eail, Please do not reply.
-\n
-Regards,
-Kaipush DevOps Team \n """
-
-     body = body + '\n' + auto_email_body
-     return(body)
-
 
 def add_attachment(attachments=""):
      attach_file_name = os.path.basename(attachments)
@@ -64,13 +47,13 @@ def add_attachment(attachments=""):
      payload.add_header('Content-Decomposition', 'attachment', filename = (attach_file_name ))
      return payload
 
-def sendEmail( fromId, toId, ccId, subject,temp_body,attachment="" ):
+def sendEmail( fromId, toId, ccId, subject,email_body,attachment="" ):
      msg = MIMEMultipart()
      msg["Subject"] = subject
      msg["From"] = fromId
      msg["To"] = toId
      msg["Cc"] = ccId
-     msg.attach(MIMEText(email_body(temp_body)))
+     msg.attach(MIMEText(email_body,'html'))
      #### attachment block ####
      if attachment:
        msg.attach(add_attachment(attachment))
